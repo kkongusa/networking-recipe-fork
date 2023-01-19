@@ -27,7 +27,7 @@ jobs:
       - name: 'Run hadolint 1'
         uses: hadolint/hadolint-action@v2.1.0
         with:
-          dockerfile: 'ovs/ovs/utilities/docker/debian/Dockerfile'
+          dockerfile: 'ipdk.recipe/ovs/ovs/utilities/docker/debian/Dockerfile'
 
       - name: 'Run hadolint 2'
         if: always()
