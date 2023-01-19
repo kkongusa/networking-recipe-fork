@@ -27,5 +27,5 @@ jobs:
       - name: 'Run hadolint'
         uses: hadolint/hadolint-action@v2.1.0
         with:
-          dockerfile: ['ovs/ovs/utilities/docker/debian/Dockerfile']
+          dockerfile: 'ovs/ovs/utilities/docker/debian/Dockerfile'
           recursive: true
