@@ -24,8 +24,57 @@ jobs:
           submodules: 'recursive'
           path: ipdk.recipe
 
-      - name: 'Run hadolint'
+      - name: 'Run hadolint 1'
         uses: hadolint/hadolint-action@v2.1.0
         with:
           dockerfile: 'ovs/ovs/utilities/docker/debian/Dockerfile'
-          recursive: true
+
+      - name: 'Run hadolint 2'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/Dockerfile'
+
+      - name: 'Run hadolint 3'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/Dockerfile.dev'
+
+      - name: 'Run hadolint 4'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/Dockerfile.build'
+
+      - name: 'Run hadolint 5'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/stratum/p4c_backends/fpm/Dockerfile'
+
+      - name: 'Run hadolint 6'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/stratum/hal/config/Dockerfile'
+
+      - name: 'Run hadolint 7'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/stratum/hal/bin/barefoot/docker/Dockerfile'
+
+      - name: 'Run hadolint 8'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/stratum/hal/bin/barefoot/docker/Dockerfile.model'
+
+      - name: 'Run hadolint 9'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/stratum/hal/bin/barefoot/docker/Dockerfile.bf_pipeline_builder'
+
+      - name: 'Run hadolint 10'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/stratum/tools/stratum_replay/Dockerfile'
+
+      - name: 'Run hadolint 11'
+        uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: 'stratum/stratum/tools/mininet/Dockerfile'
